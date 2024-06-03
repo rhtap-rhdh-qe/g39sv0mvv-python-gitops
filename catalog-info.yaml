@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: g39sv0mvv-python-gitops
+  description: This is GitOps manifest for g39sv0mvv-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: g39sv0mvv-python
+    janus-idp.io/tekton: g39sv0mvv-python 
+    backstage.io/kubernetes-id: g39sv0mvv-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:g39sv0mvv-python
